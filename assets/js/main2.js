@@ -24,14 +24,14 @@ function loadPokemonD(offset, limit) {
                 <div class="classes">
             
                     <div class="botoes">
-                        <button id="botao1">About</button>
-                        <button id="botao2">Base Stats</button>
-                        <button id="botao3">Evolution</button>
-                        <button id="botao4">Moves</button>
+                        <button id="botao1" onclick="clicou1()">About</button>
+                        <button id="botao2" onclick="clicou2()">Base Stats</button>
+                        <button id="botao3" onclick="clicou3()">Evolution</button>
+                        <button id="botao4" onclick="clicou4()">Moves</button>
                     </div>
             
             
-                    <div class="tipo" id="tipo1">
+                    <div id="tipo1" class="tipo" >
             
                         <div><span>Species1</span> <span>Seed</span></div>
             
@@ -72,19 +72,87 @@ loadMoreD.addEventListener('click', () => {
 
 
 
-
 const btn1 = document.getElementById('botao1');
-const tipo1 = document.getElementById('tipo1');
-
-const btn2 = document.getElementById('botao2'); 
-const tipo2 = document.getElementById('tipo2');
-
+const btn2 = document.getElementById('botao2');
 const btn3 = document.getElementById('botao3');
-const tipo3 = document.getElementById('tipo3');
-
 const btn4 = document.getElementById('botao4');
-const tipo4 = document.getElementById('tipo4');
 
+
+function clicou1(btn1, tipo1) {
+    var tipo1 = document.getElementById('tipo1');
+    const tipo2 = document.getElementById('tipo2');
+    const tipo3 = document.getElementById('tipo3');
+    const tipo4 = document.getElementById('tipo4');
+
+    if (tipo1.style.display === 'block') {
+        tipo1.style.display = 'block';
+
+    } else {
+        tipo1.style.display = 'block';
+        tipo2.style.display = 'none';
+        tipo3.style.display = 'none';
+        tipo4.style.display = 'none';
+    }
+
+}
+
+function clicou2(btn2, tipo2) {
+    var tipo1 = document.getElementById('tipo1');
+    var tipo2 = document.getElementById('tipo2');
+    var tipo3 = document.getElementById('tipo3');
+    var tipo4 = document.getElementById('tipo4');
+
+    if (tipo2.style.display === 'block') {
+        tipo2.style.display = 'none';
+
+    } else {
+        tipo1.style.display = 'none';
+        tipo2.style.display = 'block';
+        tipo3.style.display = 'none';
+        tipo4.style.display = 'none';
+    }
+
+}
+
+
+function clicou3(tipo3) {
+    var tipo1 = document.getElementById('tipo1');
+    var tipo2 = document.getElementById('tipo2');
+    var tipo3 = document.getElementById('tipo3');
+    var tipo4 = document.getElementById('tipo4');
+
+    if (tipo3.style.display === 'block') {
+        tipo3.style.display = 'none';
+
+    } else {
+        tipo1.style.display = 'none';
+        tipo2.style.display = 'none';
+        tipo3.style.display = 'block';
+        tipo4.style.display = 'none';
+    }
+
+}
+
+function clicou4(tipo4) {
+    var tipo1 = document.getElementById('tipo1');
+    var tipo2 = document.getElementById('tipo2');
+    var tipo3 = document.getElementById('tipo3');
+    var tipo4 = document.getElementById('tipo4');
+
+    if (tipo4.style.display === 'block') {
+        tipo4.style.display = 'none';
+
+    } else {
+        tipo1.style.display = 'none';
+        tipo2.style.display = 'none';
+        tipo3.style.display = 'none';
+        tipo4.style.display = 'block';
+    }
+
+}
+
+
+/*
 btn1.addEventListener('click', function () {
 
     if (tipo1.style.display === 'block') {
@@ -140,3 +208,4 @@ btn4.addEventListener('click', function () {
     }
 
 });
+*/
