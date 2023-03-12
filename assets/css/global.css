@@ -25,6 +25,15 @@ body {
     margin-bottom: 1rem;
 }
 
+.content .detalhes{
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #831010; 
+}
+.content .detalhes a{
+    text-decoration: none;
+    color: black;
+}
 .pokemons {
     display: grid;
     grid-template-columns: 1fr 1fr;
