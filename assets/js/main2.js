@@ -33,7 +33,12 @@ function loadPokemonD(offset, limit) {
             
                     <div id="tipo1" class="tipo" >
             
-                        <div><span>Species1</span> <span>Seed</span></div>
+                        <div>
+                        <span>Species1</span> <span>Seed</span>
+                        <span>Height</span> <span>Seed</span>
+                        <span>Weight</span> <span>Seed</span>
+                        <span>Abilities</span> <span>Seed</span>
+                        </div>
             
                         <h3>Breeding</h3>
             
@@ -42,11 +47,16 @@ function loadPokemonD(offset, limit) {
                     </div>
             
                     <div class="tipo" id="tipo2">
-
-                        <div><span>Species2</span> <span>Seed</span></div></div>
+                        <div>
+                            <span>Species2</span> <span>Seed</span>
+                        </div>
+                    </div>
                      
                     <div class="tipo" id="tipo3">
-                        <div><span>Species3</span> <span>Seed</span></div>
+                        <div>
+                            <span>HP</span> <span>.....</span>
+                            <span>Attack</span> <span>....</span>
+                        </div>
                     </div>
             
             

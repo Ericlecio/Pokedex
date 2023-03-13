@@ -21,6 +21,7 @@ function loadPokemon(offset, limit) {
                         <img src="${pokemon.photo}" 
                         alt="${pokemon.name}">
                     </div>
+                <button type="button" class="${pokemon.type}" id="botdetails" onclick="loadpokemon()">Details</button>
                 </li>
                 `).join('')
         pokemonList.innerHTML += newHtml
