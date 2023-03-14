@@ -114,7 +114,7 @@ body {
     padding: 1rem;
     height: 58vh;
     padding-top: 1rem;
-    margin-top: 8rem;
+    margin-top: 7.5rem;
 }
 
 .classes .botoes {
@@ -124,21 +124,38 @@ body {
     margin-top: 3em;
 }
 
-.classes .botoes button {
+.classes .botoes a {
     padding: 0.500rem;
     height: 10%;
     border: none;
     cursor: pointer;
     color: rgb(99, 93, 93);
     background-color: #f6f8fc;
+    position: relative;
 }
 
-.classes .botoes button:hover {
+.classes .botoes a:hover {
     padding: 0.500rem;
     height: 10%;
     border: none;
     cursor: pointer;
     color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.classes .botoes a::after {
+    content: " ";
+    width: 0%;
+    background-color: #1d1e2285;
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.classes .botoes a:hover::after {
+    width: 100%;
 }
 
 .classes .tipo {
@@ -164,10 +181,25 @@ body {
     color: rgb(99, 93, 93);
 }
 
+.classes .tipo div .span-black {
+    color: rgb(0, 0, 0);
+}
+
 .classes #tipo2,
 #tipo3,
 #tipo4 {
     display: none;
+}
+
+.classes #tipo2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.classes #tipo2 div div {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .normal {

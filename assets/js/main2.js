@@ -24,21 +24,20 @@ function loadPokemonD(offset, limit) {
                 <div class="classes">
             
                     <div class="botoes">
-                        <button id="botao1" onclick="clicou1()">About</button>
-                        <button id="botao2" onclick="clicou2()">Base Stats</button>
-                        <button id="botao3" onclick="clicou3()">Evolution</button>
-                        <button id="botao4" onclick="clicou4()">Moves</button>
+                        <a id="botao1" onclick="clicou1()">About</a>
+                        <a id="botao2" onclick="clicou2()">Base Stats</a>
+                        <a id="botao3" onclick="clicou3()">Evolution</a>
+                        <a id="botao4" onclick="clicou4()">Moves</a>
                     </div>
             
             
                     <div id="tipo1" class="tipo" >
             
                         <div>
-                        <span>Species</span><span>${pokemon.species}</span>
-                        <span>Height</span><span>${pokemon.height}</span>
-                        <span>Weight</span><span>${pokemon.weight}</span>
-                        <span>Abilities</span>${pokemon.abilities.map((ability) => `<span>${ability}</span>`).join('')}
-
+                            <span>Species</span><span class="span-black" >${pokemon.species}</span>
+                            <span>Height</span><span class="span-black" >${pokemon.height}</span>
+                            <span>Weight</span><span class="span-black" >${pokemon.weight}</span>
+                            <span>Abilities</span>${pokemon.abilities.map((ability) => `<span>${ability}</span>`).join('')}
                         </div>
             
                         <h3>Breeding</h3>
@@ -49,8 +48,8 @@ function loadPokemonD(offset, limit) {
             
                     <div class="tipo" id="tipo2">
                         <div>
-                            ${pokemon.stats.map((stats) => `<span>${stats}</span>`).join('')}  
-                            ${pokemon.base_stat.map((base_stat) => `<span>${base_stat}</span>`).join('')    }
+                            <div>${pokemon.stats.map((stats) => `<span class="span-black" >${stats}</span>`).join('')}</div>  
+                            <div>${pokemon.base_stat.map((base_stat) => `<span class="span-black" >${base_stat}</span>`).join('')}</div>
                         </div>
                     </div>
                      
