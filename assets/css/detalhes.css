@@ -194,14 +194,71 @@ body {
 .classes #tipo2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    display: none;
+}
+
+.classes #tipo2 div {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .classes #tipo2 div div {
     display: flex;
     display: grid;
     grid-template-columns: 1fr;
+    margin: 0;
 }
 
+.classes #tipo2 div .cores span {
+    height: 4px;
+    margin: 0;
+}
+
+
+.cores {
+
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.cores #coresP {
+    text-align: center;
+    height: 3px;
+    background-color: #add555;
+    animation: progress-animation 3s infinite;
+}
+
+@keyframes progress-animation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CORES */
 .normal {
     background-color: #a6a877;
 }
@@ -273,12 +330,3 @@ body {
 .fairy {
     background-color: #f9aec7;
 }
-
-
-#tipo1 {}
-
-#tipo2 {}
-
-#tipo3 {}
-
-#tipo4 {}

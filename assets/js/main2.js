@@ -26,8 +26,6 @@ function loadPokemonD(offset, limit) {
                     <div class="botoes">
                         <a id="botao1" onclick="clicou1()">About</a>
                         <a id="botao2" onclick="clicou2()">Base Stats</a>
-                        <a id="botao3" onclick="clicou3()">Evolution</a>
-                        <a id="botao4" onclick="clicou4()">Moves</a>
                     </div>
             
             
@@ -48,8 +46,23 @@ function loadPokemonD(offset, limit) {
             
                     <div class="tipo" id="tipo2">
                         <div>
-                            <div>${pokemon.stats.map((stats) => `<span class="span-black" >${stats}</span>`).join('')}</div>  
-                            <div>${pokemon.base_stat.map((base_stat) => `<span class="span-black" >${base_stat}</span>`).join('')}</div>
+                            <div>
+                                ${pokemon.stats.map((stats) => `<span class="span-black" >${stats}</span>`).join('')}
+                            </div>  
+                            <div>
+                                ${pokemon.base_stat.map((base_stat) => `<span class="span-black" >${base_stat}</span>`).join('')}
+                            </div>
+
+                            <div class="cores">
+                                <span id="coreP">      </span>
+                                <span id="coreP">      </span>
+                                <span id="coreP">      </span>
+                                <span id="coreP">      </span>
+                                <span id="coreP">      </span>
+                                <span id="coreP">      </span>
+                                <span id="coreP">      </span>
+                            </div>
+                            
                         </div>
                     </div>
                      
@@ -89,6 +102,7 @@ const btn3 = document.getElementById('botao3');
 const btn4 = document.getElementById('botao4');
 
 
+
 function clicou1(btn1, tipo1) {
     var tipo1 = document.getElementById('tipo1');
     const tipo2 = document.getElementById('tipo2');
@@ -106,7 +120,6 @@ function clicou1(btn1, tipo1) {
     }
 
 }
-
 function clicou2(btn2, tipo2) {
     var tipo1 = document.getElementById('tipo1');
     var tipo2 = document.getElementById('tipo2');
@@ -124,8 +137,6 @@ function clicou2(btn2, tipo2) {
     }
 
 }
-
-
 function clicou3(tipo3) {
     var tipo1 = document.getElementById('tipo1');
     var tipo2 = document.getElementById('tipo2');
@@ -143,7 +154,6 @@ function clicou3(tipo3) {
     }
 
 }
-
 function clicou4(tipo4) {
     var tipo1 = document.getElementById('tipo1');
     var tipo2 = document.getElementById('tipo2');
@@ -219,3 +229,7 @@ btn4.addEventListener('click', function () {
 
 });
 */
+
+
+
+
