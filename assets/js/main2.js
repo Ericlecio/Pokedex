@@ -34,10 +34,11 @@ function loadPokemonD(offset, limit) {
                     <div id="tipo1" class="tipo" >
             
                         <div>
-                        <span>Species1</span> <span>Seed</span>
-                        <span>Height</span> <span>Seed</span>
-                        <span>Weight</span> <span>Seed</span>
-                        <span>Abilities</span> <span>Seed</span>
+                        <span>Species</span><span>${pokemon.species}</span>
+                        <span>Height</span><span>${pokemon.height}</span>
+                        <span>Weight</span><span>${pokemon.weight}</span>
+                        <span>Abilities</span>${pokemon.abilities.map((ability) => `<span>${ability}</span>`).join('')}
+
                         </div>
             
                         <h3>Breeding</h3>
@@ -48,7 +49,8 @@ function loadPokemonD(offset, limit) {
             
                     <div class="tipo" id="tipo2">
                         <div>
-                            <span>Species2</span> <span>Seed</span>
+                            ${pokemon.stats.map((stats) => `<span>${stats}</span>`).join('')}  
+                            ${pokemon.base_stat.map((base_stat) => `<span>${base_stat}</span>`).join('')    }
                         </div>
                     </div>
                      
@@ -160,7 +162,6 @@ function clicou4(tipo4) {
     }
 
 }
-
 
 /*
 btn1.addEventListener('click', function () {
