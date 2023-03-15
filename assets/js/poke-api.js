@@ -8,6 +8,7 @@ function convertPokeApiDetailsToPokemon(pokeDetails) {
     pokemon.height = pokeDetails.height
     pokemon.weight = pokeDetails.weight
     pokemon.species = pokeDetails.species.name
+    pokemon.base_experience = pokeDetails.base_experience
 
     // Tipos
     const types = pokeDetails.types.map((typeSlot) => typeSlot.type.name)
@@ -27,14 +28,10 @@ function convertPokeApiDetailsToPokemon(pokeDetails) {
     pokemon.stats = stats
     pokemon.stat = stat
 
-    const base_stat = pokeDetails.stats.map((typeBase) => typeBase.base_stats)
+    const base_stat = pokeDetails.stats.map((typeBase) => typeBase.base_stat)
     const [base_stats] = base_stat
     pokemon.base_stat = base_stat
-    pokemon.base_stats = base_stats
-
-    console.log(base_stat)
-
-
+    pokemon.base_stats = base_stats 
 
     pokemon.photo = pokeDetails.sprites.other.dream_world.front_default
 

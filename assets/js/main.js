@@ -3,8 +3,6 @@ const loadMore = document.getElementById('loadMore')
 const limit = 10;
 let offset = 0;
 
-
-
 function loadPokemon(offset, limit) {
     pokeapi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map((pokemon) =>

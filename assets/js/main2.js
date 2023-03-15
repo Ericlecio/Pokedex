@@ -18,33 +18,28 @@ function loadPokemonD(offset, limit) {
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
 
-
                 <div class="imagem"><img src="${pokemon.photo}"></div>
             
                 <div class="classes">
             
                     <div class="botoes">
-                        <a id="botao1" onclick="clicou1()">About</a>
-                        <a id="botao2" onclick="clicou2()">Base Stats</a>
+                        <a type="button" onclick="clicou1()">About</a>
+                        <a type="button" onclick="clicou2()">Base Stats</a>
                     </div>
-            
-            
-                    <div id="tipo1" class="tipo" >
-            
+                    <div id="tipo1" class="tipo">
                         <div>
                             <span>Species</span><span class="span-black" >${pokemon.species}</span>
                             <span>Height</span><span class="span-black" >${pokemon.height}</span>
                             <span>Weight</span><span class="span-black" >${pokemon.weight}</span>
-                            <span>Abilities</span>${pokemon.abilities.map((ability) => `<span>${ability}</span>`).join('')}
+                            <span>Abilities</span>${pokemon.abilities.map((ability) => `<span class="span-black">${ability}</span>`).join('')}
                         </div>
-            
+
                         <h3>Breeding</h3>
             
-                        <div><span>Gender</span> <span>Seed</span></div>
-            
+                        <div><span>base_experience</span> <span class="span-black">${pokemon.base_experience}</span></div>
                     </div>
             
-                    <div class="tipo" id="tipo2">
+                    <div id="tipo2" class="tipo">
                         <div>
                             <div>
                                 ${pokemon.stats.map((stats) => `<span class="span-black" >${stats}</span>`).join('')}
@@ -54,32 +49,10 @@ function loadPokemonD(offset, limit) {
                             </div>
 
                             <div class="cores">
-                                <span id="coreP">      </span>
-                                <span id="coreP">      </span>
-                                <span id="coreP">      </span>
-                                <span id="coreP">      </span>
-                                <span id="coreP">      </span>
-                                <span id="coreP">      </span>
-                                <span id="coreP">      </span>
+                            ${pokemon.base_stat.map((base_stat) => `<meter value="50" min="0" max="100"  optimum="100" low="20" high="80"></meter>`).join('')}
                             </div>
-                            
                         </div>
                     </div>
-                     
-                    <div class="tipo" id="tipo3">
-                        <div>
-                            <span>HP</span> <span>.....</span>
-                            <span>Attack</span> <span>....</span>
-                        </div>
-                    </div>
-            
-            
-                    <div class="tipo" id="tipo4">
-                        <div>
-                            <span>Species4</span> <span>Seed</span>
-                        </div>
-                    </div>
-
                 </div>
             </div>
             </li>
@@ -95,141 +68,33 @@ loadMoreD.addEventListener('click', () => {
 })
 
 
-
-const btn1 = document.getElementById('botao1');
-const btn2 = document.getElementById('botao2');
-const btn3 = document.getElementById('botao3');
-const btn4 = document.getElementById('botao4');
-
-
-
 function clicou1(btn1, tipo1) {
-    var tipo1 = document.getElementById('tipo1');
-    const tipo2 = document.getElementById('tipo2');
-    const tipo3 = document.getElementById('tipo3');
-    const tipo4 = document.getElementById('tipo4');
 
-    if (tipo1.style.display === 'block') {
-        tipo1.style.display = 'block';
+    var tipo1 = document.getElementById('tipo1');
+    var tipo2 = document.getElementById('tipo2');
+
+    if (tipo1.style.display === 'none') {
+        tipo1.style.display = 'block'
+        tipo2.style.display = 'none'
 
     } else {
-        tipo1.style.display = 'block';
         tipo2.style.display = 'none';
-        tipo3.style.display = 'none';
-        tipo4.style.display = 'none';
+        tipo1.style.display = 'block';
     }
 
 }
 function clicou2(btn2, tipo2) {
+
     var tipo1 = document.getElementById('tipo1');
     var tipo2 = document.getElementById('tipo2');
-    var tipo3 = document.getElementById('tipo3');
-    var tipo4 = document.getElementById('tipo4');
 
-    if (tipo2.style.display === 'block') {
-        tipo2.style.display = 'none';
+    if (tipo2.style.display === 'none') {
+        tipo2.style.display = 'block';
+        tipo1.style.display = 'none'
 
     } else {
         tipo1.style.display = 'none';
         tipo2.style.display = 'block';
-        tipo3.style.display = 'none';
-        tipo4.style.display = 'none';
     }
 
 }
-function clicou3(tipo3) {
-    var tipo1 = document.getElementById('tipo1');
-    var tipo2 = document.getElementById('tipo2');
-    var tipo3 = document.getElementById('tipo3');
-    var tipo4 = document.getElementById('tipo4');
-
-    if (tipo3.style.display === 'block') {
-        tipo3.style.display = 'none';
-
-    } else {
-        tipo1.style.display = 'none';
-        tipo2.style.display = 'none';
-        tipo3.style.display = 'block';
-        tipo4.style.display = 'none';
-    }
-
-}
-function clicou4(tipo4) {
-    var tipo1 = document.getElementById('tipo1');
-    var tipo2 = document.getElementById('tipo2');
-    var tipo3 = document.getElementById('tipo3');
-    var tipo4 = document.getElementById('tipo4');
-
-    if (tipo4.style.display === 'block') {
-        tipo4.style.display = 'none';
-
-    } else {
-        tipo1.style.display = 'none';
-        tipo2.style.display = 'none';
-        tipo3.style.display = 'none';
-        tipo4.style.display = 'block';
-    }
-
-}
-
-/*
-btn1.addEventListener('click', function () {
-
-    if (tipo1.style.display === 'block') {
-        tipo1.style.display = 'block';
-
-    } else {
-        tipo1.style.display = 'block';
-        tipo2.style.display = 'none';
-        tipo3.style.display = 'none';
-        tipo4.style.display = 'none';
-    }
-
-});
-
-btn2.addEventListener('click', function () {
-
-    if (tipo2.style.display === 'block') {
-        tipo2.style.display = 'none';
-
-    } else {
-        tipo1.style.display = 'none';
-        tipo2.style.display = 'block';
-        tipo3.style.display = 'none';
-        tipo4.style.display = 'none';
-    }
-
-});
-
-btn3.addEventListener('click', function () {
-
-    if (tipo3.style.display === 'block') {
-        tipo3.style.display = 'none';
-
-    } else {
-        tipo1.style.display = 'none';
-        tipo2.style.display = 'none';
-        tipo3.style.display = 'block';
-        tipo4.style.display = 'none';
-    }
-
-});
-
-btn4.addEventListener('click', function () {
-
-    if (tipo4.style.display === 'block') {
-        tipo4.style.display = 'none';
-
-    } else {
-        tipo1.style.display = 'none';
-        tipo2.style.display = 'none';
-        tipo3.style.display = 'none';
-        tipo4.style.display = 'block';
-    }
-
-});
-*/
-
-
-
-
